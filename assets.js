@@ -1,0 +1,22 @@
+DKI.assets = [
+  {
+    src: "FFEE287F-E8F2-6619-C1E9-0311A9A01C99",
+    size: 957,
+    courseid: 100135,
+    h: 5,
+    extension: "png",
+    uploadfolderid: 67,
+    containerid: "",
+    hasPoster: 0,
+    description: "White Line",
+    w: 115,
+    datelastmodified: "January, 04 2019 11:03:00",
+    transcript: "",
+    title: "White Line",
+    filePath: "assets/FFEE287F-E8F2-6619-C1E9-0311A9A01C99.png",
+    id: "FFEE287F-E8F2-6619-C1E9-0311A9A01C99",
+    archived: false,
+    type: "image",
+    keywords: ["decoration", "line", "white"],
+  },
+];

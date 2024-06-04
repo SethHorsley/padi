@@ -1,0 +1,97 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title></title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <script
+      async=""
+      src="https://www.datadoghq-browser-agent.com/datadog-rum-v4.js"
+    ></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script defer="defer" src="player.28e567a40f91eccbd946.min.js"></script>
+    <script>
+      (function (h, o, u, n, d) {
+        h = h[d] = h[d] || {
+          q: [],
+          onReady: function (c) {
+            h.q.push(c);
+          },
+        };
+        d = o.createElement(u);
+        d.async = 1;
+        d.src = n;
+        n = o.getElementsByTagName(u)[0];
+        n.parentNode.insertBefore(d, n);
+      })(
+        window,
+        document,
+        "script",
+        "https://www.datadoghq-browser-agent.com/datadog-rum-v4.js",
+        "DD_RUM",
+      );
+
+      var initSetting = {
+        clientToken: "pub2c0b907ec6ae49850225136a1c6b889c",
+        applicationId: "8381c58e-9c77-49e2-b50d-34970f546f26",
+        site: "datadoghq.com",
+        service: "learning.padi.com-(plp)",
+        env: "prod",
+        sessionSampleRate: 20,
+        sessionReplaySampleRate: 10,
+        trackUserInteractions: true,
+        defaultPrivacyLevel: "mask-user-input",
+        trackViewsManually: true,
+      };
+      var package_id = "455";
+      var localized_title = "Open Water Diver";
+      var activity_id = "claro_b6aa500b6869c7316b73efe9b34d6160";
+      var activity_title = "Quiz Four";
+      var lang_code = "en-US";
+      var affiliateId = "32179406";
+      var student_id = "2ESXN42D9KCAF5HVMVGZL4RRW0W";
+      var userName = "Seth Horsley";
+      var page = "player.html";
+
+      DD_RUM.onReady(function () {
+        DD_RUM.init(initSetting);
+
+        DD_RUM.addRumGlobalContext("SCORM", {
+          packageId: package_id,
+          localizedTitle: localized_title,
+          activityId: activity_id,
+          activityTitle: activity_title,
+          langCode: lang_code,
+          studentId: student_id,
+        });
+
+        DD_RUM.setUser({
+          id: affiliateId,
+          name: userName,
+        });
+        DD_RUM.startView(
+          "/" + package_id + "/" + lang_code + "/" + activity_id + "/" + page,
+        );
+        DD_RUM.startSessionReplayRecording();
+      });
+    </script>
+  </head>
+  <body style="overflow: hidden; margin: 0; padding: 0" class="vsc-initialized">
+    <div>
+      <iframe
+        id="SCO1"
+        style="
+          width: 1496px;
+          height: 100vh;
+          border: none;
+          position: absolute;
+          max-height: -webkit-fill-available;
+        "
+        src="https://content.learning-prod.padi.com/secured/courses/455/en-us/claro_b6aa500b6869c7316b73efe9b34d6160/2022-03-21t22:39:32.7780925z/04-07_quiz_four_10-5-21/SCORMDriver/indexAPI.html"
+      ></iframe>
+    </div>
+    <div id="divDebug"></div>
+  </body>
+  <tailscan-container
+    id="tailscan-container"
+    style="position: absolute; top: 0px; left: 0px"
+  ></tailscan-container>
+</html>
